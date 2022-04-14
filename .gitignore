@@ -1,0 +1,55 @@
+# Node modules
+node_modules
+/.vscode
+# Adonis directory for storing tmp files
+# tmp
+
+# Environment variables, never commit this file
+.env
+.env.example
+.env.testing
+
+
+# The development sqlite file
+database/*.sqlite
+
+#type imagens
+*.png
+*.gif
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+
+#type files
+*.doc
+*.docx
+*.pdf
+*.txt
+*.xlsx
+
+#TODO Files
+*.todo
+
+#Eslint
+.eslintrc.json
+
+#Insominia
+Insominia.yaml
+
+#readme
+.md
+
+#Editor
+.editorconfig
+
+#VS Code
+.vscode
+
+#certificados
+*.pem
+
+#zip files
+*.zip
+sistema-env
+teste-env

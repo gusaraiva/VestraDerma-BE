@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      outline: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      max-width: 100%;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      padding: 10px 25px;
+      -webkit-font-smoothing: antialiased !important;
+    }
+
+    table {
+      margin: 5px;
+      padding: 0;
+    }
+
+    tr {
+      margin: 5 auto;
+      padding: 5;
+    }
+
+    td {
+      margin: 5;
+      padding: 5;
+      vertical-align: top;
+    }
+
+    address {
+      margin: 5 auto;
+      padding: 5;
+      font-size: 8px;
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap" rel="stylesheet" />
+
+</head>
+
+<body>
+  <table style="width:100%; border-bottom: 1px;">
+    <tr>
+      <td>
+        <h1 style="font-family: 'Poppins', sans-serif;">vestra</h1>
+      </td>
+      <td style="text-align: right;">
+        <strong style="font-size: 16px"> Laudo # <%= laudo_id %> </strong>
+      </td>
+    </tr>
+  </table>
+  <table style="width:100%">
+    <tr>
+      <td>
+        <address>
+          <strong style=" font-size: 12px; color:#00a19e"><%= paciente_nome %></strong><br>
+          <strong style=" color:#00a19e">Sexo:</strong> <%= paciente_sexo %><br>
+          <strong style=" color:#00a19e">Data de Nascimento:</strong> <%= paciente_birth%><br>
+          <strong style=" color:#00a19e">Data/Hora do Teste:</strong> <%= dataColeta %><br>
+          <strong style=" color:#00a19e">DATA/HORA LAUDO:</strong><%= dataResultado %>
+        </address>
+      </td>
+      <td style="text-align: right;">
+        <address>
+          <strong style=" color:#00a19e">E-mail:</strong> <%= paciente_email %><br>
+          <strong style=" color:#00a19e">CPF:</strong> <%= paciente_doc %><br>
+          <strong style=" font-size: 10px;color:#00a19e">ID Paciente:</strong> # <%= paciente_id %>
+        </address>
+
+      </td>
+    </tr>
+  </table>
+
+
+  <h3 style="font-size: 14px; padding-left: 15px"><strong><i class=""> <%= nomeTeste %></strong></i></h3>
+
+  <table style="width:100%">
+    <tr>
+      <td>
+        <address style="font-size:10px; color: #000080;">
+          <strong>RESULTADO:</strong> <%= resultadoText %> <br />
+        </address>
+      </td>
+      <td style="text-align: right;">
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <address>
+          <strong style="color:#00a19e">TIPO DE AMOSTRA:</strong> <%= tipo_amostra %><br>
+          <strong style="color:#00a19e">MÉTODO:</strong><%= metodo %> <br>
+          <strong style="color:#00a19e">EQUIPAMENTO:</strong> <%= equipamento %>
+
+        </address>
+      </td>
+      <td style="text-align: right;font-size: 8px">
+       
+      </td>
+
+    </tr>
+    <tr>
+      <td>
+        <address>
+          <strong style="color:#00a19e">EXAME REALIZADO POR:</strong> <%= coletadorNome %> - <%= docColetador %>
+        </address>
+      </td>
+    </tr>
+
+  </table>
+  <table>
+    <tr>
+      <td>
+        <address>
+          <strong style=" color:#00a19e">Análise de Resultados:</strong><br>
+          <div style="white-space: pre-line;padding-left: 3px;"> <%= analiseResultado %> </div>
+        </address>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <address>
+          <strong style=" color:#00a19e">Orientações:</strong><br>
+          <div style="white-space: pre-line;padding-left: 3px;"><%= orientacoes %></div>
+
+        </address>
+
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <address>
+          <strong style=" color:#00a19e">Sobre o teste:</strong><br>
+          <p style="white-space: pre-line;padding-left: 3px;"><%= sobreTeste %></p>
+        </address>
+      </td>
+    </tr>
+  </table>
+
+
+  <div
+    style="font-size: 10px; border-radius: 8px; color:white;background-color: #00a19e; text-align: center; width:100%; padding: 5px; ">
+    <strong>Nota:</strong> Todos os resultados devem ser correlacionados com o quadro clínico do paciente e avaliado pelo médico
+  </div>
+  <table style="width:100%">
+    <tr>
+      <td style="text-align: right;width:30%;">
+        <address>
+          <strong style=" color:#00a19e">LAUDO REALIZADO POR:</strong> <br>
+          <%= respLabNome %> - <%= respLabDocTecnico %> <br />
+          <img style="max-height: 50px;" src="file://<%= pathImages %><%= fileRespLabAss %>"></img>
+      </td>
+    </tr>
+  </table>
+  
+  <table style="width:100%;  border-bottom: 1px;">
+    <tr>
+      <td>        
+      </td>
+      <td style="text-align: right;">
+        <div>
+          <h1 style="font-family: 'Poppins', sans-serif;">vestra</h1>
+          <br />
+          <address>
+            <span style=" color:#00a19e">
+              <i class="mdi mdi-laptop"></i> https://vestrahealth.com.br
+            </span>          
+          </address>
+          
+        </div>
+        <br />
+        <address>
+          <span style=" color:#00a19e; font-size: 12px;"><i class="mdi mdi-compass"></i> 
+            Vestra Soluções Para Saúde Ltda. <br>
+            CNPJ: 37.802.366/0001-94 <br>
+            Rua Antônio Lapa, 280 - Sala 109 - Cambuí<br>
+            Campinas - SP - CEP: 13025-240</span>
+        </address>
+      </td>
+    </tr>
+  </table>
+
+
+</body>
+
+</html>
